@@ -109,12 +109,16 @@ looping(alsoMe);
 //Create an Object called 'album' with 5 keys named different song titles that you make up, with the values being the length of each song.
 
   //Code Here
-
+var album = {
+  catMeow: "3:15",
+  dogBark: "4:12",
+  babyCry: "2:58",
+  lovelylady: "3:54",
+  heyya: "3:29"
+}
 //Now, loop through your album object alerting every song title individually.
 
   //Code Here
-
-
 
 
 //NEXT PROBLEM
@@ -125,13 +129,26 @@ looping(alsoMe);
 //Create an object called states that has 5 US states as properties with the values being their population (doesn't have to be accurate).
 
   //Code Here
-
+var states = {
+  utah: 45060,
+  idaho: 39493,
+  newYork: 34055,
+  maine: 15949,
+  oregon: 50031
+}
 //Now, loop through your states object and if the states population is greater than 30K, alert that state.
 
   //Code Here
+var loopStates = function() {
+  for (var prop in states) {
+    if (states[prop] > 30000) {
+      alert(Object.keys(states) + "You have too many people.")
+    }
+  }
+}
 
 
-
+loopStates();
 
 //NEXT PROBLEM
 
@@ -150,7 +167,17 @@ var user1 = {
 that each value is truthy. If it's not truthy, remove it from the object. */
 
   //Code Here
+var checking = function(user1) {
+  for (var prop in user1) {
+    if (user1.prop !== true) {
+      delete user1.prop;
+    }
+    else {};
+  }
 
+}
+
+checking(user1);
 //Once you get your truthy Object, Change the remaining values in the object to be specific to you (name: 'your name', username: 'your username'), rather than my information.
 
   //Code Here
